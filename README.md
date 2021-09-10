@@ -1,3 +1,3 @@
 # Card
 
-A description of this package.
+A package used for implementing the common card layout found in various iOS apps such as maps and stocks
