@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// An offset on the screen that the card "sticks" to
 public struct StickyOffset: Equatable {
     
     public static let zero = StickyOffset(distanceFromBottom: 0)

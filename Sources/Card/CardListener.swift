@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// A protocol that allows classes to listen to updates from the CardAnimator class. Can be added to the CardAnimator via the addListener(_:) method
 public protocol CardListener: AnyObject {
 
     

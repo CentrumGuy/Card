@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Controls various aspects of the CardAnimator but is not required
 @objc public protocol CardDelegate {
     
     /// Asks the delegate whether the card animator should handle a particular scroll view
@@ -25,8 +26,10 @@ import UIKit
     @objc optional func cardAnimatorShouldDismissOnBackgroundTap(_ cardAnimator: CardAnimator) -> Bool
 }
 
+/// Class used to handle interactions between the Card and CardParent
 public class CardAnimator: NSObject {
     
+    /// Describes the orientation of the phone and the various types of card layout types
     public enum CardOrientation {
         /// When the screen is wide and short
         case compactVertical

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// The protocol that the view controller presenting the card must implement
 public protocol CardParent: CardListener {
     
     /// The card animator property accessible when there is a card being presented

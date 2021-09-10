@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// An icon that animates from a straight line to a down arrow. Present at the top of the card if enabled
 @IBDesignable
 public class PullTab: UIShapeView {
     

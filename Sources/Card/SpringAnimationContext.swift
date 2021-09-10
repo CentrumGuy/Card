@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// A struct that holds information about the spring animation parameters. Allows animations and completions to be added to the spring animation
 public struct SpringAnimationContext {
     
     /// The duration of the spring animation

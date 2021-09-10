@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// The protocol that the Card view controller must implement to be presented as a card
 public protocol Card: CardListener {
     
     /// The furthest view in the back of the card's view stack

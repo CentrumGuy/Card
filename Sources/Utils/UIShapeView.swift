@@ -8,18 +8,19 @@
 
 import UIKit
 
+/// A view which can draw shapes. Backed by a CAShapeLayer
 public class UIShapeView: UIView {
     
     override public class var layerClass: AnyClass {
         return CAShapeLayer.self
     }
     
+    /// Gives access to the backing CAShapeLayer
     override public var layer: CAShapeLayer {
         return super.layer as! CAShapeLayer
     }
     
-    
-    
+    /// The path of the shape
     public var path: CGPath? {
         get {
             return layer.path
@@ -30,6 +31,7 @@ public class UIShapeView: UIView {
         }
     }
     
+    /// The fill color of the shape
     public var fillColor: CGColor? {
         get {
             return layer.fillColor
@@ -40,6 +42,7 @@ public class UIShapeView: UIView {
         }
     }
     
+    /// The stroke color of the shape
     public var strokeColor: CGColor? {
         get {
             return layer.strokeColor
