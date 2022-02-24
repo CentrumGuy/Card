@@ -60,7 +60,7 @@ public struct StickyOffset: Equatable {
 public struct AlphaCurve {
     
     /// Constant alpha value for the background. Will override all other alpha parameters
-    public var overrideAlpha: CGFloat? = nil
+    public var overrideAlpha: CGFloat?
     
     /// The offset that has the minimum background brightness (darkest background)
     public var offsetForMinBrightness: StickyOffset
@@ -69,11 +69,20 @@ public struct AlphaCurve {
     public var offsetForMaxBrightness: StickyOffset
     
     /// The minimum alpha value for the background
-    public var minAlpha: CGFloat = 0
+    public var minAlpha: CGFloat
     
     /// The maximum alpha value for the backgorund
-    public var maxAlpha: CGFloat = 0.4
+    public var maxAlpha: CGFloat
     
     /// A hard cap for the maximum alpha. The background will not go past this alpha value even if the user drags the card further up on the screen
-    public var maxAlphaTopBound: CGFloat = 1
+    public var maxAlphaTopBound: CGFloat
+    
+    public init(overrideAlpha: CGFloat? = nil, offsetForMinBrightness: StickyOffset, offsetForMaxBrightness: StickyOffset, minAlpha: CGFloat = 0, maxAlpha: CGFloat = 0.4, maxAlphaTopBound: CGFloat = 1) {
+        self.overrideAlpha = overrideAlpha
+        self.offsetForMinBrightness = offsetForMinBrightness
+        self.offsetForMaxBrightness = offsetForMaxBrightness
+        self.minAlpha = minAlpha
+        self.maxAlpha = maxAlpha
+        self.maxAlphaTopBound = maxAlphaTopBound
+    }
 }
