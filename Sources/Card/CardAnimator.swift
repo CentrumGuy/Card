@@ -331,8 +331,9 @@ public class CardAnimator: NSObject {
     
     private func updateCornerRadius() {
         var currentView = cardView
+        currentView?.layer.cornerRadius = _cornerRadius
         while let superView = currentView?.superview, superView != parentView {
-            currentView?.layer.cornerRadius = _cornerRadius
+            superView.layer.cornerRadius = _cornerRadius
             currentView = superView
         }
     }
