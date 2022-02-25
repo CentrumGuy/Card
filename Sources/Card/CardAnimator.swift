@@ -866,7 +866,7 @@ fileprivate class ScrollHandler: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    private func debug(_ str: String) {
-        if ScrollHandler.debugMode { print(str) }
+    private func debug(_ str: @autoclosure () -> (String)) {
+        if ScrollHandler.debugMode { print(str()) }
     }
 }
