@@ -570,6 +570,10 @@ public class CardAnimator: NSObject {
             dismissButton?.alpha = 0
         } else if let alpha = alphaCurve.overrideAlpha {
             if let dismissButton = dismissButton, dismissButton.alpha != alpha { dismissButton.alpha = alpha }
+        } else if alphaCurve.offsetForMinBrightness == alphaCurve.offsetForMaxBrightness {
+            let tween = constant/alphaCurve.offsetForMaxBrightness.distanceFromBottom(safeAreaHeight)
+            let alpha = max(0, min(tween * (alphaCurve.maxAlpha - alphaCurve.minAlpha) + alphaCurve.minAlpha, alphaCurve.maxAlphaTopBound))
+            if let dismissButton = dismissButton, dismissButton.alpha != alpha { dismissButton.alpha = alpha }
         } else {
             var offsetBoundary = alphaCurve.offsetForMinBrightness.distanceFromBottom(safeAreaHeight) - alphaCurve.offsetForMaxBrightness.distanceFromBottom(safeAreaHeight)
             if offsetBoundary == 0 { offsetBoundary = 1 }
