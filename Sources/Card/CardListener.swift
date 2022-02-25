@@ -40,7 +40,7 @@ public protocol CardListener: AnyObject {
     ///   - animationParameters: The spring animation parameters that the card will follow (if any exist)
     func cardAnimator(_ cardAnimator: CardAnimator, heightWillChange newHeight: CGFloat, leftoverHeight: CGFloat, animationParameters: SpringAnimationContext?)
     
-    /// Called prior to the card setup. This should be the method used to set up the
+    /// Called prior to the card setup. This should be the method used to set up the CardAnimator before it presents the card
     /// - Parameter cardAnimator: The card animator calling this method
     func cardAnimatorWillBeginSetup(_ cardAnimator: CardAnimator)
     
